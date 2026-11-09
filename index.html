@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="SVSI and TBG Ethical & SQA interactive prototype webview (demo data)." />
+  <title>SVSI &amp; TBG Prototype Webview</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="logo">P</span>
+      <span>Prototype Webview</span>
+    </div>
+    <div class="tabs" id="project-tabs" role="tablist" aria-label="Projects"></div>
+    <div class="spacer"></div>
+    <div class="meta">Demo Data · For Client Review</div>
+  </header>
+
+  <main id="view-landing" class="view landing">
+    <div id="role-panels"></div>
+    <p class="footer-note">Click a role card to open that flow. Hotspots follow the Figma prototype links. Press H in the viewer to show clickable areas.</p>
+  </main>
+
+  <main id="view-viewer" class="view">
+    <div class="viewer-layout">
+      <aside class="sidebar" id="sidebar">
+        <div id="thumbs"></div>
+      </aside>
+      <div class="stage-wrap">
+        <div class="toolbar">
+          <div class="crumb" id="crumb"></div>
+          <div class="nav-btns">
+            <button type="button" class="ghost" id="btn-sidebar" title="Toggle screen list">Screens</button>
+            <button type="button" class="ghost" id="btn-roles">All Roles</button>
+            <button type="button" id="btn-back" title="Back (Esc)">Back</button>
+            <button type="button" id="btn-prev" title="Previous (←)">Prev</button>
+            <button type="button" id="btn-next" title="Next (→)">Next</button>
+            <button type="button" id="btn-hotspots" title="Toggle hotspots (H)">Show Hotspots</button>
+          </div>
+        </div>
+        <div class="stage">
+          <div class="canvas" id="canvas"></div>
+        </div>
+        <div class="status-bar">
+          <span id="status-left"></span>
+          <span class="hint" id="status-right"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
